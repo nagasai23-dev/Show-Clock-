@@ -1,3 +1,4 @@
+let audio = new Audio('watch-ticking.mp3');
 function dateDisplay(){
     let date=new Date();
     let hours=date.getHours();
@@ -8,6 +9,8 @@ function dateDisplay(){
     let secounds=date.getSeconds().toString().padStart(2,0);;
     let finalTime=(`${hours}:${minutes}:${secounds} ${militry}`);
     document.querySelector('.clock').innerHTML=finalTime;
+    audio.play(); 
+
     }
 
     dateDisplay();
